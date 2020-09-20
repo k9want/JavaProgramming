@@ -7,7 +7,7 @@ public class Start_programming {
 		System.out.println("start practice_programming_java");
 		System.out.println("Hello world");
 		System.out.println("...");
-		System.out.println("±ê¾÷Àº ÀÍ¼÷ÇØÁö±â");
+		System.out.println("");
 	}
 
 }
