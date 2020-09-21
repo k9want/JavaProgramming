@@ -40,20 +40,19 @@ public class HashMapStudentEx {
 		String str = scanner.nextLine();
 		if(str.equals("exit")) {
 			System.out.println("종료합니다");
+			
+			
 			//순차검색 Iterator를 사용해서 전체 출력하기 
 			Set<String> keys = map.keySet();  //map의 K값을 받아와서 keys저장하고 
 			Iterator<String> it =keys.iterator(); //keys 검색하고 it에 저장하고 
 			
 			
 			//it에 K들을 하나하나 다 검색해서 출력하고 
-			while(it.hasNext()) {
-				
+			while(it.hasNext()) {				
 				String _str = it.next();
 				Student value = map.get(_str);
 				
-				System.out.println(_str.toString() +" "+value.getid()+", "+value.gettel());
-				
-				
+				System.out.println(_str.toString() +" "+value.getid()+", "+value.gettel());				
 			}
 			break;
 		}
@@ -64,12 +63,6 @@ public class HashMapStudentEx {
 		else {
 			System.out.println(student.getid()+", " +student.gettel());
 		}
-		
-		
-		
-		
-		
-		
 		}
 		scanner.close();
 	}
