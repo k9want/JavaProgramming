@@ -31,7 +31,6 @@ public class ArrayList_longestname {
 			}	
 		}
 		System.out.println("가장 긴 이름은 : " + ArrayList_name.get(longnameIndex));
-		
 	}
 
 }
