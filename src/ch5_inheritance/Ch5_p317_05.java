@@ -44,7 +44,6 @@ class ColorPoint extends Point{
 	public String toString(){
 		return getColor()+"색의 ("+getX()+","+getY()+")"+"의 점";
 	}
-	
 }
 
 public class Ch5_p317_05 {
