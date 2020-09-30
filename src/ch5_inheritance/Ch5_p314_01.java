@@ -19,10 +19,9 @@ class ColorTV extends TV{
 	}
 
 	void printProperty() {
-		System.out.println(getSize()+"인치 "+color+"컬러");
+		System.out.println(getSize()+"인치  "+color+"컬러");
 	}
 }
-
 public class Ch5_p314_01  {
 	
 	public static void main(String[] args) {
