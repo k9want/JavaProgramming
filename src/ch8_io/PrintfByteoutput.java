@@ -13,7 +13,7 @@ public class PrintfByteoutput {
 			b[i]=(byte)num[i];
 			System.out.println(b[i] + "  " + num[i] );
 			}	
-		}
+		
 
 	}
-//이걸 몰랐다니..... printf()가  바이트로 ㄴ저장되어있는 것을 어떻게 출력하는지 확인했다. 허허
+}
