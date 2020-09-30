@@ -19,8 +19,6 @@ class IPTV extends ColorTV{
 	
 }
 
-
-
 public class Ch5_p315_02 {
 
 	public static void main(String[] args) {

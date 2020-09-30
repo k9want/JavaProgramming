@@ -83,6 +83,7 @@ public class Ch7_p439_11 {
 			n++;
 			while(true) {
 				System.out.print("나라와 수도 입력"+n+">>");
+				
 				String country = scanner.next();
 				if(country.equals("그만"))
 					break;

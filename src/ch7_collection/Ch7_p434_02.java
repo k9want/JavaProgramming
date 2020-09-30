@@ -33,6 +33,7 @@ public class Ch7_p434_02 {
 				sum += 1.0;
 				break;
 			case 'F':
+				
 				sum += 0;
 				break;
 			}
