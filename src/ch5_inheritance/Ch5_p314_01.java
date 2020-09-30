@@ -13,7 +13,6 @@ class ColorTV extends TV{
 		super(size);
 		this.color = color;
 	}
-	
 	int getColor() {
 		return color;
 	}
