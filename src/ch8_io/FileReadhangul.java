@@ -13,15 +13,13 @@ public class FileReadhangul {
 		
 		try {
 			fin = new FileInputStream("C:\\Users\\USER\\Desktop\\오래된 노래-스탠딩에그.txt");
-			in = new InputStreamReader(fin,"MS949");
-			int c;
+			in = new InputStreamReader(fin,"MS949"); //2번째 매개변수에는 문자집합을 넣는다. 
+			int c; //int형으로 리턴한다. byte , char형이 아니다. 
 			
-			System.out.println(in.getEncoding());
+			System.out.println(in.getEncoding()); //문자집합을 출력한다.
 			
-			while((c= in.read()) != -1) {
-				
-				System.out.println((char)c);
-							
+			while((c= in.read()) != -1) {  //파일의 끝을 읽으며  -1을 출력하기 때문에 		
+			System.out.println((char)c);				
 			}
 			
 			in.close();
