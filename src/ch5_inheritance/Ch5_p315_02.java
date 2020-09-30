@@ -1,28 +1,5 @@
 package ch5_inheritance;
 
-class TV{
-	private int size;
-	public TV(int size) {this.size = size; }
-	protected int getSize() {return size; }
-}
-
-class ColorTV extends TV{
-	int color;
-	
-	public ColorTV(int size,int color){
-		super(size);
-		this.color = color;
-	}
-	
-	int getColor() {
-		return color;
-	}
-	
-	
-	void printProperty() {
-		System.out.println(getSize()+"인치 "+color+"컬러");
-	}
-}
 
 class IPTV extends ColorTV{
 	String IP;
