@@ -23,8 +23,6 @@ class ColorTV extends TV{
 	}
 }
 
-
-
 public class Ch5_p314_01  {
 	
 	public static void main(String[] args) {
