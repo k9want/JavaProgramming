@@ -1,6 +1,8 @@
 package ch13_thread;
 
 import java.awt.*;
+import java.awt.event.*;
+
 import javax.swing.*;
 
 class TimerRunnable implements Runnable {
@@ -26,6 +28,7 @@ class TimerRunnable implements Runnable {
 }
 
 public class RunnableTimerEx extends JFrame {
+	Thread th ;
 	RunnableTimerEx() {
 		this.setTitle("타이머");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,19 +36,39 @@ public class RunnableTimerEx extends JFrame {
 		JPanel mp = new JPanel();
 		mp.setLayout(new FlowLayout());
 
-		JLabel la = new JLabel();
+		JLabel la = new JLabel("타이머");
 		la.setFont(new Font("바탕", Font.BOLD, 26));
 
 		this.setContentPane(mp);
 		mp.add(la);
+		JButton btn = new JButton("종료");
+		btn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e ) {
+				th.interrupt();
+				JButton btn = (JButton)e.getSource();
+				btn.setEnabled(false);
+				
+			}
+		});
+		JButton start= new JButton("시작");
+		start.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				th.start();
+				JButton btn = (JButton)e.getSource();
+				btn.setEnabled(false);
+			}
+		});
+		
+		mp.add(start);
+		mp.add(btn);
+
 
 		TimerRunnable runnable = new TimerRunnable(la);
-		Thread th = new Thread(runnable);
+		th = new Thread(runnable);
 
 		this.setSize(400, 300);
 		this.setVisible(true);
 
-		th.start();
 	}
 
 	public static void main(String[] args) {
