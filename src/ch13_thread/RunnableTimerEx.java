@@ -28,7 +28,8 @@ class TimerRunnable implements Runnable {
 }
 
 public class RunnableTimerEx extends JFrame {
-	Thread th ;
+	Thread th;
+
 	RunnableTimerEx() {
 		this.setTitle("타이머");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,25 +44,24 @@ public class RunnableTimerEx extends JFrame {
 		mp.add(la);
 		JButton btn = new JButton("종료");
 		btn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e ) {
+			public void actionPerformed(ActionEvent e) {
 				th.interrupt();
-				JButton btn = (JButton)e.getSource();
+				JButton btn = (JButton) e.getSource();
 				btn.setEnabled(false);
-				
+
 			}
 		});
-		JButton start= new JButton("시작");
+		JButton start = new JButton("시작");
 		start.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e){
+			public void actionPerformed(ActionEvent e) {
 				th.start();
-				JButton btn = (JButton)e.getSource();
+				JButton btn = (JButton) e.getSource();
 				btn.setEnabled(false);
 			}
 		});
-		
+
 		mp.add(start);
 		mp.add(btn);
-
 
 		TimerRunnable runnable = new TimerRunnable(la);
 		th = new Thread(runnable);

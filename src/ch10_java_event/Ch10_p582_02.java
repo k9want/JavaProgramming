@@ -7,7 +7,7 @@ import java.awt.event.*;
 import javax.swing.event.*;
 
 public class Ch10_p582_02 extends JFrame {
-	public Ch10_p582_02() {
+	public Ch10_p582_02(){
 		
 		this.setTitle("¹®Á¦2¹ø");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

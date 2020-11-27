@@ -14,8 +14,7 @@ public class IndepClassListener extends JFrame{
 		
 		JButton btn = new JButton("Action");
 		btn.addActionListener(new Listener());
-		mypanel.add(btn);
-		
+		mypanel.add(btn);	
 		this.setContentPane(mypanel);
 		
 		this.setVisible(true);
